@@ -1,0 +1,286 @@
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:#f4f7fc;
+font-family:'Segoe UI',sans-serif;
+color:#1e293b;
+}
+
+.top-header{
+height:74px;
+background:#ffffff;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 32px;
+border-bottom:1px solid #e5e7eb;
+box-shadow:0 2px 8px rgba(15,23,42,.04);
+}
+
+.header-left{display:flex;align-items:center;}
+.welcome-message{margin:0;font-size:18px;font-weight:700;}
+
+.profile-image{
+width:48px;
+height:48px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.appointment-container{
+max-width:1500px;
+margin:0 auto;
+padding:32px 36px;
+}
+
+.page-header{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+margin-bottom:28px;
+}
+
+.page-title{
+font-size:42px;
+font-weight:700;
+color:#0f2f57;
+margin-bottom:6px;
+}
+
+.page-description{
+font-size:15px;
+color:#475569;
+}
+
+.next-appointment-card{
+background:#eef4ff;
+border:1px solid #7c83ff;
+border-radius:12px;
+padding:18px 22px;
+display:flex;
+align-items:center;
+gap:16px;
+min-width:250px;
+}
+
+.next-appointment-card i{
+font-size:34px;
+color:#4f6cf7;
+}
+
+.next-appointment-card strong{
+display:block;
+font-size:14px;
+color:#3254d5;
+}
+
+.next-appointment-card span{
+font-size:13px;
+color:#1e293b;
+}
+
+.filters-section{
+margin-bottom:18px;
+}
+
+/* ELIMINADO EL FILTRO CENTRADO ARRIBA */
+
+.filter-top{
+display:none;
+}
+
+/* TODO EN UNA SOLA FILA */
+
+.filter-row{
+display:flex;
+gap:18px;
+align-items:center;
+}
+
+.search-wrapper{
+flex:1;
+position:relative;
+}
+
+.search-wrapper input{
+height:44px;
+border-radius:8px;
+border:1px solid #cfd6e4;
+padding:0 16px;
+}
+
+.specialty-select,
+.branch-select{
+width:220px;
+height:44px;
+border-radius:8px;
+border:1px solid #cfd6e4;
+}
+
+.filter-button{
+height:44px;
+padding:0 20px;
+border:1px solid #cfd6e4;
+border-radius:8px;
+background:#ffffff;
+display:flex;
+align-items:center;
+gap:8px;
+cursor:pointer;
+font-size:14px;
+font-weight:600;
+white-space:nowrap;
+}
+
+.appointments-list{
+display:flex;
+flex-direction:column;
+gap:14px;
+margin-top:18px;
+}
+
+.appointment-card{
+background:#fff;
+border:1px solid #d9dee8;
+border-radius:10px;
+padding:14px 16px;
+display:grid;
+grid-template-columns:1.1fr 1.5fr 1.7fr 1.7fr 1fr 1.4fr;
+align-items:center;
+column-gap:18px;
+box-shadow:0 2px 6px rgba(15,23,42,.04);
+}
+
+.appointment-date{
+display:flex;
+flex-direction:column;
+}
+
+.appointment-date strong{
+font-size:15px;
+font-weight:700;
+}
+
+.appointment-date span{
+font-size:13px;
+color:#64748b;
+}
+
+.appointment-doctor,
+.appointment-specialty,
+.appointment-branch{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.appointment-doctor img,
+.appointment-specialty img,
+.appointment-branch img{
+width:44px;
+height:44px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.appointment-doctor strong,
+.appointment-specialty strong,
+.appointment-branch strong{
+display:block;
+font-size:14px;
+}
+
+.appointment-doctor span,
+.appointment-specialty span,
+.appointment-branch span{
+font-size:12px;
+color:#64748b;
+}
+
+.status-badge{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:8px 14px;
+border-radius:999px;
+font-size:13px;
+font-weight:600;
+}
+
+.confirmed{
+background:#dcfce7;
+color:#15803d;
+}
+
+.appointment-actions{
+display:flex;
+justify-content:flex-end;
+}
+
+.reschedule-button{
+border:none;
+background:#7c83ff;
+color:#fff;
+padding:12px 20px;
+border-radius:8px;
+font-size:13px;
+font-weight:700;
+display:flex;
+align-items:center;
+gap:8px;
+cursor:pointer;
+}
+
+.pagination-section{
+margin-top:28px;
+display:flex;
+justify-content:center;
+}
+
+.page-link{
+border:none;
+color:#7c83ff;
+}
+
+.page-item.active .page-link{
+background:#7c83ff;
+color:#fff;
+}
+
+@media(max-width:1200px){
+
+.page-header{
+flex-direction:column;
+gap:20px;
+}
+
+.filter-row{
+flex-direction:column;
+align-items:stretch;
+}
+
+.specialty-select,
+.branch-select{
+width:100%;
+}
+
+.filter-button{
+justify-content:center;
+}
+
+.appointment-card{
+grid-template-columns:1fr;
+row-gap:16px;
+}
+
+.appointment-actions{
+justify-content:flex-start;
+}
+
+}

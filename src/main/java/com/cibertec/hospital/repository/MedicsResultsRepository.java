@@ -3,9 +3,9 @@ package com.cibertec.hospital.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.cibertec.hospital.model.TypeProcess;
+import com.cibertec.hospital.model.MedicsResults;
 
 @Repository
-public interface TypeProcessRepository extends JpaRepository<TypeProcess, Long> {
+public interface MedicsResultsRepository extends JpaRepository<MedicsResults, Long>{
 
 }

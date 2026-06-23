@@ -23,23 +23,17 @@ public class Appointment {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "patient_id")
-    private Long patientId;
-
     @Column(name = "doctor_id")
     private Long doctorId;
 
     @Column(name = "specialty_id")
     private Long specialtyId;
 
-    @Column(name = "appointment_date")
-    private LocalDate appointmentDate;
-
-    @Column(name = "appointment_time")
-    private LocalTime appointmentTime;
-
     @Column(name = "status")
     private String status;
+    
+    @Column(name = "motive")
+    private String motive;
 
     @Column(name = "consultation_cost")
     private BigDecimal consultationCost;
@@ -57,9 +51,6 @@ public class Appointment {
     private Long updatedBy;
     
     //-- Agregados:
-    
-    @Column(name = "appointment_statuses_id")
-    private Long appointmentStatusesId;
 
     @Column(name = "payment_method_id")
     private Long paymentMethodId;

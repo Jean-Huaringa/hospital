@@ -23,12 +23,6 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-
-    @Column(name = "user_id")
-    private Long userId;
-
-    @Column(name = "specialty_id")
-    private Long specialtyId;
     
     //-- Nuevo:
     @Column(name = "user_worker_id")

@@ -29,9 +29,15 @@ public class UserWorker {
     @Column(name = "user_id")
     private Long userId;
 
+    @Column(name = "hospital_id")
+    private Long hospitalId;
+    
     @Column(name = "url_documents")
     private String urlDocuments;
-
+    
+    @Column(name = "photo_url")
+    private String photoUrl;
+    
     @Column(name = "is_enabled")
     private Boolean isEnabled;
 
@@ -43,4 +49,6 @@ public class UserWorker {
 
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+    
+   
 }

@@ -114,7 +114,9 @@ font-weight:600;
 transition:.2s;
 }
 
-.filter-button:hover
+.filter-button:hover{
+transform:translateY(-1px);
+}
 
 .appointment-table-header{
 display:grid;
@@ -270,7 +272,9 @@ cursor:pointer;
 transition:.2s;
 }
 
-.detail-button:hover
+.detail-button:hover{
+opacity:.9;
+}
 
 .pagination-section{
 margin-top:28px;
