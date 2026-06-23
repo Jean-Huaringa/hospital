@@ -32,4 +32,8 @@ public class AppointmentReturnTransaction {
 
     @Column(name = "processed_at")
     private LocalDateTime processedAt;
+    
+    //-- Nuevo:
+    @Column(name = "updated_at")
+    private LocalDateTime updatedAt;
 }

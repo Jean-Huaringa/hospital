@@ -55,4 +55,8 @@ public class Hospital {
 
     @Column(name = "is_deleted")
     private Boolean isDeleted;
+    
+    //-- nuevo
+    @Column(name = "district_id")
+    private Long districtId;
 }

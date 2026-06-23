@@ -29,4 +29,8 @@ public class Doctor {
 
     @Column(name = "specialty_id")
     private Long specialtyId;
+    
+    //-- Nuevo:
+    @Column(name = "user_worker_id")
+    private Long userWorkerId;
 }

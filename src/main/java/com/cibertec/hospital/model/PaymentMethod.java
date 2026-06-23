@@ -1,5 +1,7 @@
 package com.cibertec.hospital.model;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,4 +34,8 @@ public class PaymentMethod {
 
     @Column(name = "is_deleted")
     private Boolean isDeleted;
+    
+    //-- Nuevo:
+    @Column(name = "update_at")
+    private LocalDateTime updateAt;
 }
