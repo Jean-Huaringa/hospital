@@ -33,6 +33,6 @@ public class RefundPolicy {
     @Column(name = "return_type")
     private String returnType;
 
-    @Column(name = "plan_id")
-    private Long planId;
+    @Column(name = "subscription_id")
+    private Long subscriptionId;
 }
