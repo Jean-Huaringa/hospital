@@ -62,6 +62,9 @@ public class Users {
     @Column(name = "district_id")
     private Long districtId;
 
+    @Column(name = "user_role_id")
+    private Long userRoleId;
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
