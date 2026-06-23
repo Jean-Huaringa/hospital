@@ -15,7 +15,6 @@
 
 	<header class="top-header">
 		<div class="header-left">
-			<button class="menu-button"><i class="bi bi-list"></i></button>
 			<h5 class="welcome-message">¡Hola <span th:text="${userName}">María</span>!</h5>
 		</div>
 
@@ -327,60 +326,11 @@
 				</div>
 			</div>
 
-			<!-- CARD 6 -->
-			<div class="appointment-card">
-				<div class="appointment-date">
-					<i class="bi bi-calendar-check"></i>
-					<div>
-						<strong>29 May 2026</strong>
-						<span>08:30 AM</span>
-					</div>
-				</div>
-
-				<div class="appointment-specialty">
-					<img th:src="@{/img/specialties/Neumologia.png}" alt="">
-					<div>
-						<strong>Neumología</strong>
-						<span>Control Respiratorio</span>
-					</div>
-				</div>
-
-				<div class="appointment-branch">
-					<img th:src="@{/img/branches/JavierPrado.png}" alt="">
-					<div>
-						<strong>Sede Javier Prado</strong>
-						<span>Av. Javier Prado Este 1501</span>
-					</div>
-				</div>
-
-				<div class="appointment-doctor">
-					<img th:src="@{/img/doctors/default-doctor.png}" alt="">
-					<div>
-						<strong>Dra. Laura Torres</strong>
-						<span>Neumóloga</span>
-					</div>
-				</div>
-
-				<div class="appointment-cost">
-					<strong>S/ 190.00</strong>
-				</div>
-
-				<div class="appointment-status">
-					<span class="status-badge pending">
-						Pendiente
-					</span>
-				</div>
-
-				<div class="appointment-actions">
-					<button type="button" class="detail-button">
-						<i class="bi bi-eye"></i>
-						Ver detalle
-					</button>
-				</div>
-			</div>
-
+			
 		</section>
-
+		
+		<br>
+		<br>
 
 		<section class="pagination-section">
 
@@ -403,9 +353,6 @@
 	</main>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<script th:src="@{/js/appointment-history.js}"></script>
-
 </body>
 
 </html>

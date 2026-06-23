@@ -41,6 +41,9 @@ public class Users {
     @Column(name = "document_number")
     private String documentNumber;
 
+    @Column(name = "photo_url")
+    private String photoUrl;
+    
     @Column(name = "phone_number")
     private String phoneNumber;
 

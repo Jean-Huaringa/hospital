@@ -12,9 +12,20 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @RequestMapping("/api/appointment")
 public class AppointmentController {
-	  @GetMapping("/history")
-	    public String history(Model model){
-	        model.addAttribute("userName", "María");
-	        return "history";
-	    }
+	@GetMapping("/history")
+	public String history(Model model) {
+		model.addAttribute("userName", "María");
+		return "history";
+	}
+
+	@GetMapping("/exam-history")
+	public String examHistory(Model model) {
+		model.addAttribute("userName", "María");
+		return "exam-history";
+	}
+	@GetMapping("/list") 
+	public String appointmentList(Model model) { 
+		model.addAttribute("userName", "María"); 
+		return "appointment-list"; 
+		}
 }

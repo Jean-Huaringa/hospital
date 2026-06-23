@@ -13,18 +13,19 @@ import lombok.NoArgsConstructor;
 
 @Builder
 @Entity
-@Table(name = "doctor")
+@Table(name = "meidocs_results")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Doctor {
+public class MedicsResults {
+	 @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    @Column(name = "id")
+	    private Long id;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
-    
-    //-- Nuevo:
-    @Column(name = "user_worker_id")
-    private Long userWorkerId;
+	    @Column(name = "title")
+	    private String title;
+
+	    @Column(name = "appointment_id")
+	    private Long appointmentId;
 }

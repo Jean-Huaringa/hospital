@@ -13,18 +13,20 @@ import lombok.NoArgsConstructor;
 
 @Builder
 @Entity
-@Table(name = "doctor")
+@Table(name = "meidocs_results_img_referential")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Doctor {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
-    
-    //-- Nuevo:
-    @Column(name = "user_worker_id")
-    private Long userWorkerId;
+public class MedicalsResultImgReferential {
+	 @Id
+	    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	    @Column(name = "id")
+	    private Long id;
+
+	    @Column(name = "meidocs_results_id")
+	    private Long meidocsResultsId;
+
+	    @Column(name = "url_img")
+	    private String urlImg;
 }
