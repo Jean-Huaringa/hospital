@@ -37,4 +37,13 @@ public class DoctorShift {
 
     @Column(name = "status")
     private String status;
+    //-- Nuevo:
+    @Column(name = "medical_specialties_id")
+    private Long medicalSpecialtiesId;
+
+    @Column(name = "hospital_id")
+    private Long hospitalId;
+
+    @Column(name = "update_at")
+    private LocalDateTime updateAt;
 }

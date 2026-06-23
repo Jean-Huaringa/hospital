@@ -55,4 +55,21 @@ public class Appointment {
 
     @Column(name = "updated_by")
     private Long updatedBy;
+    
+    //-- Agregados:
+    
+    @Column(name = "appointment_statuses_id")
+    private Long appointmentStatusesId;
+
+    @Column(name = "payment_method_id")
+    private Long paymentMethodId;
+
+    @Column(name = "hospital_id")
+    private Long hospitalId;
+
+    @Column(name = "users_id")
+    private Long usersId;
+
+    @Column(name = "doctor_shift_id")
+    private Long doctorShiftId;
 }
