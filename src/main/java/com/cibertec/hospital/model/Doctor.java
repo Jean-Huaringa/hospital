@@ -1,5 +1,7 @@
 package com.cibertec.hospital.model;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -23,6 +25,9 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
+    
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
     
     //-- Nuevo:
     @Column(name = "user_worker_id")
