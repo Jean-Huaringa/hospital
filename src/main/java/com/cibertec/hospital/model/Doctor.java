@@ -25,11 +25,23 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
-    
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
+
+    @Column(name = "cmp")
+    private String cmp;
     
     //-- Nuevo:
     @Column(name = "user_worker_id")
     private Long userWorkerId;
+
+	@Column(name = "created_at")
+	private LocalDateTime createdAt;
+
+	@Column(name = "updated_at")
+	private LocalDateTime updatedAt;
+    
+	@Column(name = "is_enabled")
+	private Boolean isEnabled;
+
+	@Column(name = "is_deleted")
+	private Boolean isDeleted;
 }

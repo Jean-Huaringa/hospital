@@ -1,5 +1,9 @@
 package com.cibertec.hospital.service;
 
-public interface PaymentMethodService {
+import java.util.List;
 
+import com.cibertec.hospital.model.PaymentMethod;
+
+public interface PaymentMethodService {
+	List<PaymentMethod> findAllEnabled();
 }

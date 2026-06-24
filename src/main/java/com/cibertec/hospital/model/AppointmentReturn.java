@@ -27,6 +27,9 @@ public class AppointmentReturn {
     @Column(name = "reason")
     private String reason;
 
+    @Column(name = "amount_refunded")
+    private Long amountRefunded;
+
     @Column(name = "status")
     private String status;
 

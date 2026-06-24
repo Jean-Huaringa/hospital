@@ -1,5 +1,7 @@
 package com.cibertec.hospital.model;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,4 +31,16 @@ public class MedicalSpecialty {
 
     @Column(name = "description")
     private String description;
+
+	@Column(name = "created_at")
+	private LocalDateTime createdAt;
+
+	@Column(name = "updated_at")
+	private LocalDateTime updatedAt;
+    
+	@Column(name = "is_enabled")
+	private Boolean isEnabled;
+
+	@Column(name = "is_deleted")
+	private Boolean isDeleted;
 }

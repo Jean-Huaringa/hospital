@@ -26,14 +26,9 @@ public class AppointmentReturnTransaction {
 
     @Column(name = "appointment_return_id")
     private Long appointmentReturnId;
-
-    @Column(name = "refund_method")
-    private String refundMethod;
-
-    @Column(name = "processed_at")
-    private LocalDateTime processedAt;
     
     //-- Nuevo:
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 }

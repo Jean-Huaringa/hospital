@@ -28,14 +28,18 @@ public class PaymentMethod {
 
     @Column(name = "name")
     private String name;
+    
+    //-- Nuevo:
 
     @Column(name = "is_enabled")
     private Boolean isEnabled;
 
     @Column(name = "is_deleted")
     private Boolean isDeleted;
-    
-    //-- Nuevo:
-    @Column(name = "update_at")
-    private LocalDateTime updateAt;
+
+	@Column(name = "created_at")
+	private LocalDateTime createdAt;
+
+	@Column(name = "updated_at")
+	private LocalDateTime updatedAt;
 }

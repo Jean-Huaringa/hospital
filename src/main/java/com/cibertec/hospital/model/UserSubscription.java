@@ -33,8 +33,14 @@ public class UserSubscription {
     private Long subscriptionId;
 
     @Column(name = "star_date")
-    private LocalDateTime startDate;
+    private LocalDateTime startDate; // 0
 
     @Column(name = "end_date")
-    private LocalDateTime endDate;
+    private LocalDateTime endDate; // el mismo día que se inicio del siguiente mes
+
+	@Column(name = "is_enabled")
+	private Boolean isEnabled;
+
+	@Column(name = "is_deleted")
+	private Boolean isDeleted;
 }
