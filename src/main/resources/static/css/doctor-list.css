@@ -1,0 +1,300 @@
+/* =========================================
+RESET + FUENTE
+========================================= */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:
+		"Segoe UI",
+		Tahoma,
+		Geneva,
+		Verdana,
+		sans-serif;
+}
+
+/* =========================================
+CONTENEDOR
+========================================= */
+
+.doctor-container {
+	padding: 32px 36px;
+	background: #f4f7fc;
+	min-height: calc(100vh - 80px);
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+.page-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+.page-title {
+	font-size: 40px;
+	font-weight: 700;
+	color: #123f73;
+	margin-bottom: 6px;
+}
+
+.page-description {
+	font-size: 14px;
+	color: #64748b;
+}
+
+.new-doctor-button {
+	height: 44px;
+	padding: 0 20px;
+	border: none;
+	border-radius: 12px;
+	background: #7479f5;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+/* =========================================
+FILTROS
+========================================= */
+
+.filters-section {
+	margin-bottom: 20px;
+}
+
+.filter-row {
+	display: flex;
+	gap: 14px;
+}
+
+.search-wrapper {
+	flex: 1;
+}
+
+.search-wrapper input,
+.specialty-select,
+.status-select {
+	height: 48px;
+	border: 1px solid #d9dee8;
+	border-radius: 12px;
+	background: #fff;
+	padding: 0 16px;
+}
+
+.search-wrapper input {
+	width: 100%;
+}
+
+.specialty-select {
+	width: 230px;
+}
+
+.status-select {
+	width: 210px;
+}
+
+/* =========================================
+CABECERA TABLA
+========================================= */
+
+.doctor-table-header {
+	display: grid;
+	grid-template-columns:
+	70px
+	    1.2fr
+	    1.6fr
+	    1.1fr
+	    1fr
+	    120px
+	    90px;
+	padding: 0 18px 12px;
+	color: #64748b;
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+/* =========================================
+LISTADO
+========================================= */
+
+.doctors-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+/* =========================================
+CARD
+========================================= */
+
+.doctor-card {
+	background: #fff;
+	border: 1px solid #e5e7eb;
+	border-radius: 18px;
+	padding: 18px;
+	display: grid;
+	grid-template-columns:
+	70px
+	    1.2fr
+	    1.6fr
+	    1.1fr
+	    1fr
+	    120px
+	    90px;
+	align-items: center;
+	box-shadow: 0 2px 10px rgba(15, 23, 42, .05);
+
+}
+
+/* =========================================
+FOTO
+========================================= */
+
+.doctor-photo img {
+	width: 56px;
+	height: 56px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+/* =========================================
+MÉDICO
+========================================= */
+
+.doctor-name {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.doctor-name strong {
+	font-size: 14px;
+	font-weight: 600;
+	color: #1e293b;
+}
+
+.doctor-email{
+    font-size:13px;
+    color:#64748b;
+}
+
+/* =========================================
+ESPECIALIDAD
+========================================= */
+
+.doctor-specialty {
+	font-size: 14px;
+	font-weight: 600;
+	color: #1e293b;
+}
+
+/* =========================================
+TELÉFONO
+========================================= */
+
+.doctor-phone {
+	font-size: 14px;
+	color: #1e293b;
+}
+
+/* =========================================
+ESTADO
+========================================= */
+
+.status-badge {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 8px 14px;
+	border-radius: 999px;
+	font-size: 12px;
+	font-weight: 700;
+}
+
+.active-status {
+	background: #dcfce7;
+	color: #15803d;
+}
+
+.inactive-status {
+	background: #fee2e2;
+	color: #dc2626;
+}
+
+/* =========================================
+ACCIONES
+========================================= */
+
+.doctor-actions {
+	display: flex;
+	gap: 8px;
+}
+
+.edit-button,
+.status-button {
+	width: 36px;
+	height: 36px;
+
+
+	border: none;
+	border-radius: 10px;
+
+	cursor: pointer;
+
+
+}
+
+.edit-button,
+.status-button{
+    width:36px;
+    height:36px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+/* =========================================
+PAGINACIÓN
+========================================= */
+
+.pagination-section {
+	margin-top: 24px;
+	display: flex;
+	justify-content: center;
+}
+
+.pagination {
+	display: flex;
+	gap: 8px;
+	list-style: none;
+}
+
+.page-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	border-radius: 10px;
+	text-decoration: none;
+	background: #fff;
+	color: #7479f5;
+
+}
+
+.page-item.active .page-link {
+	background: #7479f5;
+	color: #fff;
+}
+

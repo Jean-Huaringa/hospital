@@ -24,20 +24,21 @@ public class AppointmentController {
 	
 	@GetMapping("/history")
 	public String history(Model model) {
-		model.addAttribute("userName", "María");
-		return "history";
+	    model.addAttribute("userName", "María");
+	    return "client/history";
 	}
 
 	@GetMapping("/exam-history")
 	public String examHistory(Model model) {
-		model.addAttribute("userName", "María");
-		return "exam-history";
+	    model.addAttribute("userName", "María");
+	    return "client/exam-history";
 	}
-	@GetMapping("/list") 
-	public String appointmentList(Model model) { 
-		model.addAttribute("userName", "María"); 
-		return "appointment-list"; 
-		}
+
+	@GetMapping("/list")
+	public String appointmentList(Model model) {
+	    model.addAttribute("userName", "María");
+	    return "client/appointment-list";
+	}
 	
 	 @GetMapping
 	    public ResponseEntity<ApiResponse<Page<AppointmentHistoryDTO>>> findAppointments(

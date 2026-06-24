@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Especialidades | Panel Administrativo</title>
+<link rel="stylesheet"
+      th:href="@{/css/admin-sidebar.css}">
+<link rel="stylesheet"
+      th:href="@{/css/admin-navbar.css}">
+<link rel="stylesheet"
+      th:href="@{/css/specialty-list.css}">
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+<div th:replace="~{fragments/admin-sidebar :: adminSidebar}">
+</div>
+
+<div class="admin-content">
+
+<div th:replace="~{fragments/admin-navbar :: adminNavbar}">
+</div>
+
+<main class="specialty-container">
+    <section class="page-header">
+
+        <div>
+            <h1 class="page-title">Especialidades </h1>
+            <p class="page-description">
+                Gestiona las especialidades médicas registradas en el sistema.
+            </p>
+        </div>
+
+        <a th:href="@{/admin/specialties/create}"
+           class="new-specialty-button">
+            <i class="bi bi-plus-circle"></i>  Nueva Especialidad
+        </a>
+
+    </section>
+
+    <section class="search-section">
+        <input type="text" class="search-input"
+               placeholder="Buscar especialidad...">
+    </section>
+
+    <section class="specialty-table-header">
+
+        <div>ID</div>
+        <div>Imagen</div>
+        <div>Especialidad</div>
+        <div>Descripción</div>
+        <div>Sede</div>
+        <div>Acciones</div>
+
+    </section>
+
+    <section class="specialties-list">
+
+        <article class="specialty-card">
+            <div>1</div>
+            <div class="specialty-image">
+                <img th:src="@{/img/specialities/cardiologia.png}"
+                     alt="Cardiología">
+            </div>
+
+            <div class="specialty-name"> Cardiología </div>
+            <div> Atención especializada del corazón </div>
+            <div class="branch-info">
+                <span> Sede Santa María  </span>
+            </div>
+
+            <div class="specialty-actions">
+                <a th:href="@{/admin/specialties/edit}"
+                   class="edit-button">
+                    <i class="bi bi-pencil-square"></i>
+                </a>
+            </div>
+        </article>
+
+        <article class="specialty-card">
+            <div>2</div>
+            <div class="specialty-image">
+                <img th:src="@{/img/specialities/neurologia.png}"
+                     alt="Neurología">
+            </div>
+
+            <div class="specialty-name">Neurología</div>
+            <div> Diagnóstico y tratamiento neurológico</div>
+            <div class="branch-info">
+                <span> Sede Lince</span>
+            </div>
+
+            <div class="specialty-actions">
+                <a th:href="@{/admin/specialties/edit}"
+                   class="edit-button">
+                    <i class="bi bi-pencil-square"></i>
+                </a>
+            </div>
+        </article>
+
+        <article class="specialty-card">
+            <div>3</div>
+            <div class="specialty-image">
+                <img th:src="@{/img/specialities/pediatria.png}"
+                     alt="Pediatría">
+            </div>
+            <div class="specialty-name">Pediatría </div>
+            <div> Atención médica infantil </div>
+            <div class="branch-info">
+                <span> Sede Javier Prado </span>
+            </div>
+            <div class="specialty-actions">
+                <a th:href="@{/admin/specialties/edit}"
+                   class="edit-button">
+                    <i class="bi bi-pencil-square"></i>
+                </a>
+            </div>
+        </article>
+
+    </section>
+
+    <section class="pagination-section">
+        <ul class="pagination">
+            <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+            </li>
+
+            <li class="page-item">
+                <a class="page-link" href="#"> 2 </a>
+            </li>
+
+            <li class="page-item">
+                <a class="page-link" href="#"> 3</a>
+            </li>
+
+        </ul>
+
+    </section>
+
+</main>
+
+</div>
+
+</body>
+
+</html>
