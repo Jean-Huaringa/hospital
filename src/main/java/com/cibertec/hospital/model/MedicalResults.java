@@ -1,5 +1,7 @@
 package com.cibertec.hospital.model;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,11 +15,11 @@ import lombok.NoArgsConstructor;
 
 @Builder
 @Entity
-@Table(name = "meidocs_results")
+@Table(name = "medical_results")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MedicsResults {
+public class MedicalResults {
 	 @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
 	    @Column(name = "id")
@@ -28,4 +30,25 @@ public class MedicsResults {
 
 	    @Column(name = "appointment_id")
 	    private Long appointmentId;
+
+	    @Column(name = "diagnosis")
+	    private String diagnosis;
+
+	    @Column(name = "observations")
+	    private String observations;
+
+	    @Column(name = "prescription")
+	    private String prescription;
+	    
+		@Column(name = "is_enabled")
+		private Boolean isEnabled;
+
+		@Column(name = "is_deleted")
+		private Boolean isDeleted;
+
+		@Column(name = "created_at")
+		private LocalDateTime createdAt;
+
+		@Column(name = "updated_at")
+		private LocalDateTime updatedAt;
 }

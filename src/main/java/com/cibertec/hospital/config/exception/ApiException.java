@@ -7,9 +7,10 @@ import lombok.Getter;
 @Getter
 public class ApiException extends RuntimeException {
 
-    private final ErrorCode errorCode;
+	private static final long serialVersionUID = 1L;
+	private final ErrorCode errorCode;
 
-    protected ApiException(
+    public ApiException(
             String message,
             ErrorCode errorCode
     ) {

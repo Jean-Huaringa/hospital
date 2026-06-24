@@ -53,15 +53,6 @@ public class Users {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "country_id")
-    private Long countryId;
-
-    @Column(name = "department_id")
-    private Long departmentId;
-
-    @Column(name = "province_id")
-    private Long provinceId;
-
     @Column(name = "district_id")
     private Long districtId;
 
@@ -73,4 +64,10 @@ public class Users {
 
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
+
+	@Column(name = "is_enabled")
+	private Boolean isEnabled;
+
+	@Column(name = "is_deleted")
+	private Boolean isDeleted;
 }

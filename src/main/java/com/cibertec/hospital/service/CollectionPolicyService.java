@@ -1,5 +1,5 @@
 package com.cibertec.hospital.service;
 
-public interface AppointmentCostService {
+public interface CollectionPolicyService {
 
 }

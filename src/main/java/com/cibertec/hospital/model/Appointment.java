@@ -1,14 +1,18 @@
 package com.cibertec.hospital.model;
-import jakarta.persistence.*;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 
 @Builder
 @Entity
@@ -18,46 +22,40 @@ import java.time.LocalTime;
 @AllArgsConstructor
 public class Appointment {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private Long id;
 
-    @Column(name = "doctor_id")
-    private Long doctorId;
+	@Column(name = "status")
+	private String status;
 
-    @Column(name = "specialty_id")
-    private Long specialtyId;
+	@Column(name = "motive")
+	private String motive;
 
-    @Column(name = "status")
-    private String status;
-    
-    @Column(name = "motive")
-    private String motive;
+	@Column(name = "consultation_cost")
+	private BigDecimal consultationCost;
 
-    @Column(name = "consultation_cost")
-    private BigDecimal consultationCost;
+	@Column(name = "is_enabled")
+	private Boolean isEnabled;
 
-    @Column(name = "created_at")
-    private LocalDateTime createdAt;
-    
-    @Column(name = "is_enabled")
-    private Boolean isEnabled;
-    
-    @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
-    
-    //-- Agregados:
+	@Column(name = "is_deleted")
+	private Boolean isDeleted;
 
-    @Column(name = "payment_method_id")
-    private Long paymentMethodId;
+	@Column(name = "created_at")
+	private LocalDateTime createdAt;
 
-    @Column(name = "hospital_id")
-    private Long hospitalId;
+	@Column(name = "updated_at")
+	private LocalDateTime updatedAt;
 
-    @Column(name = "users_id")
-    private Long usersId;
+	// -- Agregados:
 
-    @Column(name = "doctor_shift_id")
-    private Long doctorShiftId;
+	@Column(name = "payment_method_id")
+	private Long paymentMethodId;
+
+	@Column(name = "users_id")
+	private Long usersId;
+
+	@Column(name = "doctor_shift_id")
+	private Long doctorShiftId;
 }

@@ -3,8 +3,13 @@ package com.cibertec.hospital.model;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import com.cibertec.hospital.enums.TransactionStatusEnum;
+import com.cibertec.hospital.enums.TransactionTypeEnum;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -27,14 +32,13 @@ public class Transaction {
     @Column(name = "id")
     private Long id;
 
-    @Column(name = "transaction_code")
-    private String transactionCode;
-
+	@Enumerated(EnumType.STRING)
     @Column(name = "transaction_type")
-    private String transactionType;
+    private TransactionTypeEnum transactionType;
 
+	@Enumerated(EnumType.STRING)
     @Column(name = "status")
-    private String status;
+    private TransactionStatusEnum status;
 
     @Column(name = "total_amount")
     private BigDecimal totalAmount;
@@ -48,6 +52,6 @@ public class Transaction {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @Column(name = "created_by")
-    private Long createdBy;
+	@Column(name = "is_deleted")
+	private Boolean isDeleted;
 }
