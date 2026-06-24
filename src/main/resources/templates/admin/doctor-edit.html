@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Editar Médico | Panel Administrativo</title>
+
+	<link rel="stylesheet" th:href="@{/css/admin-sidebar.css}">
+	<link rel="stylesheet" th:href="@{/css/admin-navbar.css}">
+	<link rel="stylesheet" th:href="@{/css/doctor-create.css}">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body>
+
+	<div th:replace="~{fragments/admin-sidebar :: adminSidebar}"></div>
+	<div class="admin-content">
+		<div th:replace="~{fragments/admin-navbar :: adminNavbar}"></div>
+		<main class="doctor-create-container">
+
+			<section class="page-header">
+
+				<div>
+					<h1 class="page-title"> Editar Médico </h1>
+					<p class="page-description">
+						Actualiza la información del médico.
+					</p>
+				</div>
+
+			</section>
+			<section class="doctor-form-card">
+				<form>
+					<div class="form-grid">
+						<div class="form-group">
+							<label>Nombre</label>
+							<input type="text" value="Juan">
+						</div>
+
+						<div class="form-group">
+							<label>Correo</label>
+							<input type="email" value="juan.perez@hospital.com">
+						</div>
+
+						<div class="form-group">
+							<label>Apellido Paterno</label>
+							<input type="text" value="Pérez">
+						</div>
+
+						<div class="form-group">
+							<label>Teléfono</label>
+							<input type="text" value="999 888 777">
+						</div>
+
+						<div class="form-group">
+							<label>Apellido Materno</label>
+							<input type="text" value="Gómez">
+						</div>
+
+						<div class="form-group">
+							<label>Especialidad</label>
+
+							<select>
+								<option selected>Cardiología</option>
+								<option> Pediatría</option>
+								<option> Neurología </option>
+							</select>
+
+						</div>
+
+						<div class="form-group">
+						    <label>Estado</label>
+						    <select>
+						        <option selected> Activo </option>
+						        <option> Inactivo </option>
+						    </select>
+						</div>
+
+						<div class="form-group">
+							<label>Foto</label>
+							<input type="file">
+						</div>
+
+					</div>
+
+					<div class="form-actions">
+
+						<a th:href="@{/admin/doctors}" class="cancel-button">Cancelar </a>
+
+						<button type="submit" class="save-button">
+							<i class="bi bi-check-circle"></i>
+							Actualizar Médico
+						</button>
+
+					</div>
+				</form>
+			</section>
+		</main>
+
+
+	</div>
+
+</body>
+
+</html>

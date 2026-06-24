@@ -10,14 +10,7 @@
 </head>
 <body>
 
-<header class="top-header">
-    <div class="header-left">
-        <h5 class="welcome-message">¡Hola <span th:text="${userName}">María</span>!</h5>
-    </div>
-    <div class="header-right">
-        <img th:src="@{/img/profiles/profile.png}" alt="Perfil" class="profile-image">
-    </div>
-</header>
+<div th:replace="fragments/client-header :: clientHeader"></div>
 
 <main class="exam-history-container">
 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Nuevo Médico | Panel Administrativo</title>
+
+	<link rel="stylesheet" th:href="@{/css/admin-sidebar.css}">
+	<link rel="stylesheet" th:href="@{/css/admin-navbar.css}">
+	<link rel="stylesheet" th:href="@{/css/doctor-create.css}">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+</head>
+
+<body>
+
+	<div th:replace="~{fragments/admin-sidebar :: adminSidebar}"></div>
+
+	<div class="admin-content">
+
+		<div th:replace="~{fragments/admin-navbar :: adminNavbar}"></div>
+
+		<main class="doctor-create-container">
+
+			<section class="page-header">
+
+				<div>
+
+					<h1 class="page-title">
+						Nuevo Médico
+					</h1>
+
+					<p class="page-description">
+						Registra un nuevo médico en el sistema.
+					</p>
+
+				</div>
+
+			</section>
+
+			<section class="doctor-form-card">
+
+				<form>
+
+					<div class="form-grid">
+
+						<!-- NOMBRE -->
+						<div class="form-group">
+							<label>Nombre</label>
+							<input type="text" placeholder="Ingrese el nombre">
+						</div>
+
+						<!-- CORREO -->
+						<div class="form-group">
+							<label>Correo</label>
+							<input type="email" placeholder="correo@hospital.com">
+						</div>
+
+						<!-- APELLIDO PATERNO -->
+						<div class="form-group">
+							<label>Apellido Paterno</label>
+							<input type="text" placeholder="Apellido paterno">
+						</div>
+
+						<!-- TELÉFONO -->
+						<div class="form-group">
+							<label>Teléfono</label>
+							<input type="text" placeholder="999 999 999">
+						</div>
+
+						<!-- APELLIDO MATERNO -->
+						<div class="form-group">
+							<label>Apellido Materno</label>
+							<input type="text" placeholder="Apellido materno">
+						</div>
+
+						<!-- ESPECIALIDAD -->
+						<div class="form-group">
+							<label>Especialidad</label>
+							<select>
+
+								<option>Seleccione una especialidad</option>
+								<option>Cardiología</option>
+								<option>Pediatría</option>
+								<option>Neurología</option>
+							</select>
+						</div>
+
+						<!-- ESTADO -->
+						<div class="form-group">
+						    <label>Estado</label>
+						    <input type="text" value="Activo" readonly>
+						</div>
+
+						<!-- FOTO -->
+						<div class="form-group">
+							<label>Foto</label>
+							<input type="file">
+						</div>
+					</div>
+					<div class="form-actions">
+						<a th:href="@{/admin/doctors}" class="cancel-button">Cancelar</a>
+						<button type="submit" class="save-button">
+							<i class="bi bi-check-circle"></i>Guardar Médico
+						</button>
+					</div>
+				</form>
+			</section>
+		</main>
+
+	</div>
+
+</body>
+
+</html>

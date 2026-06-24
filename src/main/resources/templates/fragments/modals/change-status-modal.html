@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div th:fragment="changeStatusModal">
+
+<div class="modal fade"
+     id="changeStatusModal"
+     tabindex="-1"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+        <div class="modal-content custom-modal">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title">
+                    Cambiar Estado
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+                <p>¿Desea cambiar el estado del registro?  </p>
+				<div class="form-group">
+				<label> Estado</label>
+				<select class="status-select-modal">
+				    <option selected>Activo </option>
+				    <option>  Inactivo  </option>
+				</select>
+				</div>
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="btn btn-light"
+                        data-bs-dismiss="modal">
+                    Cancelar
+                </button>
+
+				<button type="button" class="btn btn-primary save-status-button">
+				Guardar</button>
+				
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
