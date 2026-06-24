@@ -1,0 +1,166 @@
+/* ========================================
+   SIDEBAR ADMINISTRATIVO
+   MISMA IDENTIDAD VISUAL DEL CLIENTE
+======================================== */
+
+.admin-sidebar{
+    width:280px;
+    height:100vh;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    display:flex;
+    flex-direction:column;
+
+    background:#ffffff;
+    border-right:1px solid #e5e7eb;
+
+    overflow-y:auto;
+    z-index:1000;
+}
+
+/* ========================================
+   LOGO
+======================================== */
+
+.sidebar-logo{
+    padding:28px 24px;
+    border-bottom:1px solid #e5e7eb;
+}
+
+.sidebar-logo h2{
+    margin:0;
+    font-size:24px;
+    font-weight:700;
+    color:#123f73;
+}
+
+.sidebar-logo span{
+    display:block;
+    margin-top:4px;
+
+    font-size:13px;
+    color:#64748b;
+}
+
+/* ========================================
+   MENÚ
+======================================== */
+
+.sidebar-menu{
+    flex:1;
+    padding:24px 0;
+}
+
+/* ========================================
+   GRUPOS
+======================================== */
+
+.menu-group{
+    margin-bottom:22px;
+}
+
+.menu-group-title{
+    padding:0 24px;
+    margin-bottom:10px;
+
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+
+    color:#64748b;
+}
+
+.menu-group-items{
+    display:flex;
+    flex-direction:column;
+}
+
+/* ========================================
+   LINKS
+======================================== */
+
+.menu-link{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:12px 24px;
+
+    text-decoration:none;
+
+    color:#1e293b;
+    font-size:14px;
+    font-weight:600;
+
+    border-radius:0;
+
+    transition:.2s;
+}
+
+.menu-link i{
+    font-size:16px;
+    min-width:20px;
+}
+
+/* Hover estilo cliente */
+
+.menu-link:hover{
+    background:#eef4ff;
+    color:#4f6cf7;
+}
+
+/* Activo */
+
+.menu-link.active{
+    background:#eef4ff;
+    color:#4f6cf7;
+
+    border-right:4px solid #4f6cf7;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.sidebar-footer{
+    padding:18px 0;
+    border-top:1px solid #e5e7eb;
+}
+
+.logout-link{
+    color:#dc2626;
+}
+
+.logout-link:hover{
+    background:#fef2f2;
+    color:#dc2626;
+}
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+.admin-sidebar::-webkit-scrollbar{
+    width:6px;
+}
+
+.admin-sidebar::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.admin-sidebar::-webkit-scrollbar-thumb{
+    background:#d9dee8;
+    border-radius:999px;
+}
+
+/* ========================================
+   PREPARADO PARA DESPLEGABLES FUTUROS
+======================================== */
+
+.menu-group.collapsed .menu-group-items{
+    display:none;
+}

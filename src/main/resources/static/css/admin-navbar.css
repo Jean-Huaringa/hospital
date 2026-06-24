@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+    font-family:
+        "Segoe UI",
+        Tahoma,
+        Geneva,
+        Verdana,
+        sans-serif;
+}
+
+/* =========================================
+   ADMIN NAVBAR
+========================================= */
+
+.top-header{
+    height:80px;
+
+    background:#ffffff;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 32px;
+
+    border-bottom:1px solid #e5e7eb;
+
+    box-shadow:0 2px 8px rgba(15,23,42,.04);
+}
+
+/* =========================================
+   IZQUIERDA
+========================================= */
+
+.header-left{
+    display:flex;
+    align-items:center;
+}
+
+.header-user-info{
+    display:flex;
+    flex-direction:column;
+}
+
+.welcome-message{
+    margin:0;
+
+    font-size:20px;
+    font-weight:700;
+
+    color:#123f73;
+}
+
+.user-role{
+    margin-top:4px;
+
+    font-size:13px;
+    color:#64748b;
+}
+
+/* =========================================
+   DERECHA
+========================================= */
+
+.header-right{
+    display:flex;
+    align-items:center;
+    gap:16px;
+}
+
+/* =========================================
+   FOTO PERFIL
+========================================= */
+
+.profile-image{
+    width:48px;
+    height:48px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid #eef2ff;
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.admin-content{
+    margin-left:280px;
+    min-height:100vh;
+
+    background:#f4f7fc;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+    .top-header{
+        padding:0 20px;
+    }
+
+    .welcome-message{
+        font-size:18px;
+    }
+
+}

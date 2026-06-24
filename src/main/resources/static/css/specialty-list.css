@@ -1,0 +1,320 @@
+/* =========================================
+CONTENEDOR
+========================================= */
+
+.specialty-container {
+	padding: 32px 36px;
+	background: #f4f7fc;
+	min-height: calc(100vh - 80px);
+
+}
+
+/* =========================================
+HEADER
+========================================= */
+
+.page-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+}
+
+.page-title {
+	font-size: 36px;
+	font-weight: 700;
+	color: #123f73;
+	margin-bottom: 6px;
+}
+
+.page-description {
+	font-size: 14px;
+	color: #64748b;
+}
+
+.search-section {
+	width: 100%;
+	margin-bottom: 24px;
+}
+
+.search-input {
+	width: 100%;
+	height: 52px;
+}
+
+/* =========================================
+BOTÓN NUEVA ESPECIALIDAD
+========================================= */
+
+.new-specialty-button {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	background: #7479f5;
+	color: #ffffff;
+	text-decoration: none;
+	padding: 12px 20px;
+	border-radius: 12px;
+	font-weight: 600;
+	transition: .2s;
+
+}
+
+.new-specialty-button:hover {
+	color: #ffffff;
+	opacity: .95;
+
+}
+
+/* =========================================
+BÚSQUEDA
+========================================= */
+
+.search-section {
+	margin-bottom: 24px;
+}
+
+.search-input {
+	width: 100%;
+	height: 52px;
+	padding: 0 18px;
+	border: 1px solid #d9dee8;
+	border-radius: 14px;
+	background: #ffffff;
+	font-size: 14px;
+}
+
+.search-input:focus {
+	outline: none;
+	border-color: #7479f5;
+	box-shadow: 0 0 0 3px rgba(116, 121, 245, .15);
+}
+
+/* =========================================
+CABECERA TABLA
+========================================= */
+
+.specialty-table-header {
+
+	display: grid;
+	grid-template-columns:
+		60px 100px 180px 2fr 220px 90px;
+	gap: 16px;
+	align-items: center;
+	background: #eef2ff;
+	color: #5b5fe8;
+	border: 1px solid #dbe4ff;
+	padding: 18px 20px;
+	border-radius: 16px;
+	font-weight: 600;
+	margin-bottom: 12px;
+}
+
+.specialty-table-header div{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+/* =========================================
+TARJETAS
+========================================= */
+.specialty-card {
+	display: grid;
+	grid-template-columns:
+		60px 100px 180px 2fr 220px 90px;
+	gap: 16px;
+	align-items: center;
+	background: #ffffff;
+	padding: 18px 20px;
+	border-radius: 16px;
+	border: 1px solid #e5e7eb;
+	margin-bottom: 12px;
+	transition: .2s;
+}
+
+.specialty-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 14px rgba(15, 23, 42, .08);
+
+}
+
+/* =========================================
+IMAGEN ESPECIALIDAD
+========================================= */
+
+.specialty-image {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.specialty-image img {
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+	border-radius: 12px;
+
+}
+
+/* =========================================
+ESPECIALIDAD
+========================================= */
+
+.specialty-name {
+	font-weight: 600;
+	color: #123f73;
+}
+
+/* =========================================
+MÉDICOS
+========================================= */
+
+.specialty-count {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 700;
+	color: #7479f5;
+}
+
+/* =========================================
+SEDE
+========================================= */
+
+.branch-info {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	gap:12px;
+}
+
+.branch-info img {
+	width: 42px;
+	height: 42px;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 1px solid #e5e7eb;
+}
+
+.branch-info span {
+	font-size: 14px;
+	color: #334155;
+}
+
+/* =========================================
+ACCIONES
+========================================= */
+
+.specialty-actions {
+	display: flex;
+	justify-content: center;
+}
+
+.edit-button {
+	width: 38px;
+	height: 38px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #eef2ff;
+	color: #7479f5;
+	border-radius: 10px;
+	text-decoration: none;
+	transition: .2s;
+}
+
+.edit-button:hover {
+	background: #7479f5;
+	color: #ffffff;
+}
+
+/* =========================================
+PAGINACIÓN
+========================================= */
+
+.pagination-section {
+	margin-top: 24px;
+	display: flex;
+	justify-content: center;
+}
+
+.pagination {
+	display: flex;
+	gap: 8px;
+	list-style: none;
+	padding: 0;
+}
+
+.page-link {
+	width: 38px;
+	height: 38px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	border-radius: 10px;
+	background: #ffffff;
+	border: 1px solid #d9dee8;
+	color: #475569;
+
+}
+
+.page-item.active .page-link {
+	background: #7479f5;
+	border-color: #7479f5;
+	color: #ffffff;
+
+
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:1200px) {
+
+
+	.specialty-table-header,
+	.specialty-card {
+
+		grid-template-columns:
+			50px 70px 140px 1.5fr 80px 180px 70px;
+
+
+	}
+}
+
+@media(max-width:992px) {
+	.page-header {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 16px;
+	}
+}
+
+@media(max-width:768px) {
+
+	.specialty-container {
+
+		padding: 24px;
+	}
+
+	.specialty-table-header {
+		display: none;
+	}
+
+	.specialty-card {
+		grid-template-columns: 1fr;
+		gap: 12px;
+	}
+
+	.specialty-actions {
+		justify-content: flex-start;
+	}
+
+	.branch-info {
+		justify-content: flex-start;
+	}
+
+
+}

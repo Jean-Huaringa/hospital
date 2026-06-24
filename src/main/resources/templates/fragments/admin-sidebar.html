@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<aside class="admin-sidebar" th:fragment="adminSidebar">
+
+    <div class="sidebar-logo">
+        <h2>Hospital</h2>
+        <span>Panel Administrativo</span>
+    </div>
+
+    <nav class="sidebar-menu">
+
+        <!-- DASHBOARD -->
+
+        <a th:href="@{/admin/dashboard}" class="menu-link">
+            <i class="bi bi-speedometer2"></i>
+            <span>Dashboard</span>
+        </a>
+
+        <!-- GESTIÓN MÉDICA -->
+
+        <div class="menu-group">
+
+            <div class="menu-group-title"> Gestión Médica</div>
+
+            <div class="menu-group-items">
+
+                <a th:href="@{/admin/doctors}" class="menu-link">
+                    <i class="bi bi-person-badge"></i>
+                    <span>Médicos</span>
+                </a>
+
+                <a th:href="@{/admin/specialties}" class="menu-link">
+                    <i class="bi bi-heart-pulse"></i>
+                    <span>Especialidades</span>
+                </a>
+
+                <a th:href="@{/admin/shifts}" class="menu-link">
+                    <i class="bi bi-calendar-week"></i>
+                    <span>Turnos</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- GESTIÓN DE CITAS -->
+
+        <div class="menu-group">
+
+            <div class="menu-group-title">Gestión de Citas </div>
+
+            <div class="menu-group-items">
+
+                <a th:href="@{/admin/appointments}" class="menu-link">
+                    <i class="bi bi-calendar-check"></i>
+                    <span>Citas</span>
+                </a>
+
+                <a th:href="@{/admin/reschedules}" class="menu-link">
+                    <i class="bi bi-arrow-repeat"></i>
+                    <span>Reprogramaciones</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- PACIENTES -->
+
+        <div class="menu-group">
+
+            <div class="menu-group-title"> Pacientes</div>
+
+            <div class="menu-group-items">
+
+                <a th:href="@{/admin/patients}" class="menu-link">
+                    <i class="bi bi-people"></i>
+                    <span>Pacientes</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- SEDES -->
+
+        <div class="menu-group">
+
+            <div class="menu-group-title">Sedes </div>
+
+            <div class="menu-group-items">
+
+                <a th:href="@{/admin/hospitals}" class="menu-link">
+                    <i class="bi bi-hospital"></i>
+                    <span>Hospitales</span>
+                </a>
+
+                <a th:href="@{/admin/hospital-specialties}" class="menu-link">
+                    <i class="bi bi-building-add"></i>
+                    <span>Especialidades por Sede</span>
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- ADMINISTRACIÓN -->
+
+        <div class="menu-group">
+
+            <div class="menu-group-title">  Administración </div>
+
+            <div class="menu-group-items">
+
+                <a th:href="@{/admin/users}" class="menu-link">
+                    <i class="bi bi-person-circle"></i>
+                    <span>Usuarios</span>
+                </a>
+
+                <a th:href="@{/admin/workers}" class="menu-link">
+                    <i class="bi bi-person-workspace"></i>
+                    <span>Trabajadores</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="sidebar-footer">
+
+        <a href="#" class="menu-link logout-link">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Cerrar Sesión</span>
+        </a>
+
+    </div>
+
+</aside>
+
+</body>
+</html>
